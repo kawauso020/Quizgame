@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;   // ← フォーカス制御に必要
 
+
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class QuizManager : MonoBehaviour
 {
     [SerializeField]
@@ -90,22 +94,22 @@ public class QuizManager : MonoBehaviour
             if (string.IsNullOrWhiteSpace(lines[i])) continue;
 
             string[] columns = lines[i].Split(',');
-            if (columns.Length < 6) continue;
+            if (columns.Length < 6) continue;  //マジックナンバーです。変数化してください。
 
             string question = columns[0].Trim();
-            string[] answers = new string[4];
-            for (int j = 0; j < 4; j++)
+            string[] answers = new string[4];  //マジックナンバーです。変数化してください。
+            for (int j = 0; j < 4; j++)  //マジックナンバーです。変数化してください。
             {
                 answers[j] = columns[j + 1].Trim();
             }
 
-            if (!int.TryParse(columns[5].Trim(), out int correctIndex))
+            if (!int.TryParse(columns[5].Trim(), out int correctIndex))  //マジックナンバーです。変数化してください。
             {
                 Debug.LogWarning($"正解インデックスが無効です: {lines[i]}");
                 continue;
             }
 
-            if (correctIndex < 0 || correctIndex >= 4)
+            if (correctIndex < 0 || correctIndex >= 4)  //マジックナンバーです。変数化してください。
             {
                 Debug.LogWarning($"正解インデックスが範囲外です: {lines[i]}");
                 continue;
@@ -128,12 +132,12 @@ public class QuizManager : MonoBehaviour
             if (correctCount == questions.Length)
             {
                 audioSource.PlayOneShot(audioClips[2]);
-                StartCoroutine(PlayFireworksSequence(3));
+                StartCoroutine(PlayFireworksSequence(3));  //マジックナンバーです。変数化してください。
                 messageText.text = "パーフェクト！！";
             }
-            else if (correctCount >= questions.Length - 2)
+            else if (correctCount >= questions.Length - 2)  //マジックナンバーです。変数化してください。
             {
-                audioSource.PlayOneShot(audioClips[2]);
+                audioSource.PlayOneShot(audioClips[2]);  //マジックナンバーです。変数化してください。
                 StartCoroutine(PlayFireworksSequence(1));
                 messageText.text = "おしい！あとちょっと！";
             }
@@ -220,7 +224,7 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             SpawnFirework();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f);  //マジックナンバーです。変数化してください。
         }
     }
 
@@ -229,16 +233,16 @@ public class QuizManager : MonoBehaviour
         Camera cam = Camera.main;
         float screenWidth = Screen.width;
         float screenHeight = Screen.height;
-        float margin = 50f;
+        float margin = 50f; 
 
         float randomX = Random.Range(margin, screenWidth - margin);
         float randomY = Random.Range(screenHeight / 2f, screenHeight - margin);
 
-        Vector3 screenPos = new Vector3(randomX, randomY, cam.nearClipPlane + 5f);
+        Vector3 screenPos = new Vector3(randomX, randomY, cam.nearClipPlane + 5f);  //マジックナンバーです。変数化してください。
         Vector3 worldPos = cam.ScreenToWorldPoint(screenPos);
-        worldPos.z = -5f;
+        worldPos.z = -5f;  //マジックナンバーです。変数化してください。
 
         GameObject fw = Instantiate(fireworkPrefab, worldPos, Quaternion.identity, fireworksParent);
-        Destroy(fw, 5f);
+        Destroy(fw, 5f);  //マジックナンバーです。変数化してください。
     }
 }

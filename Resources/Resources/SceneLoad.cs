@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class SceneLoad : MonoBehaviour
 {
     [SerializeField]
@@ -15,16 +18,15 @@ public class SceneLoad : MonoBehaviour
 
     [SerializeField]
     private Slider slider;
-    // Start is called before the first frame update
+
     void Start()
     {
         Debug.Log(clearTimeSO.FirstClearTime);
         StartCoroutine(LoadNextSceneAsync());
     }
-
-    // Update is called once per frame
     IEnumerator LoadNextSceneAsync()
     {
+        //コメントで残す必要は？
         // 前のロードシーンをアンロード
         //SceneManager.UnloadSceneAsync("LoadScene");
 
@@ -33,7 +35,7 @@ public class SceneLoad : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            var progressVal = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            var progressVal = Mathf.Clamp01(asyncLoad.progress / 0.9f); //マジックナンバーです。変数化してください。
             slider.value = progressVal;
             yield return null;
         }

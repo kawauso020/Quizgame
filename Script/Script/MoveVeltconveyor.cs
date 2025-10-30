@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
+/// 
+/// そもそもこのクラスとMoveBeltConveyorはどう違うの？どっちとも使われているのか？
+/// であれば、名前をもっとわかりやすくしてください。
 public class MoveVeltconber : MonoBehaviour
 {
     [SerializeField] float speed = 50f;

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CountDwon : MonoBehaviour
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
+public class CountDown : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI limitTimeText;
@@ -33,11 +36,11 @@ public class CountDwon : MonoBehaviour
 
     void FixedUpdate()
     {
-        timeValue += 0.017f;
+        timeValue += 0.017f; //マジックナンバーです。変数化してください。
 
         if (!changingOrder)
         {
-            int remainingSeconds = Mathf.Max(0, (int)(changeFrame / 60 - timeValue));
+            int remainingSeconds = Mathf.Max(0, (int)(changeFrame / 60 - timeValue)); // マジックナンバーです。変数化してください。
             limitTimeText.text = $"のこり<size=0.6><color=yellow>{remainingSeconds}</color></size>びょう";
 
             if (remainingSeconds == 0)

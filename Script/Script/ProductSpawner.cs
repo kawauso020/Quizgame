@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class ProductSpawner : MonoBehaviour
 {
     public GameObject[] prefabs; // 生成するPrefab
@@ -17,7 +20,7 @@ public class ProductSpawner : MonoBehaviour
     {
         if (prefabs.Length == 0) return; // 配列が空なら処理しない
 
-        Vector3 spawnPos = new Vector3(-11f, spawnY, 0f); // 左端から出現
+        Vector3 spawnPos = new Vector3(-11f, spawnY, 0f); // 左端から出現 //-11はマジックナンバーです。変数化してください。
 
         // ランダムにPrefabを選択
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];

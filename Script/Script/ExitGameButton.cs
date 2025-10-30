@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class ExitGameButton : MonoBehaviour
 {
    

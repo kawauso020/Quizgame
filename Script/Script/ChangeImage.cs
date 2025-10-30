@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class ChangeImage : MonoBehaviour
 {
     public Image targetImage; // 変更するImageコンポーネント
@@ -23,7 +26,7 @@ public class ChangeImage : MonoBehaviour
         {
             targetImage.sprite = sprites[currentIndex];
             currentIndex = (currentIndex + 1) % sprites.Length;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2f); //マジックナンバーです。変数化してください。
         }
     }
 }

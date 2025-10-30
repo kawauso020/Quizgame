@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 [RequireComponent(typeof(MoveObject))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Draggable : MonoBehaviour
@@ -34,7 +37,7 @@ public class Draggable : MonoBehaviour
     {
         if (Time.timeScale == 0) return;
 
-        gameManager?.PlaySound(2);
+        gameManager?.PlaySound(2); //２はマジックナンバーです。変数化してください。
         spriteRenderer.color = dragColor;
 
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -44,7 +47,7 @@ public class Draggable : MonoBehaviour
         isDragging = true;
 
         moveObject.StopMove();
-        moveObject.StartDeleteTimer(10f);
+        moveObject.StartDeleteTimer(10f); //マジックナンバーです。変数化してください。
     }
 
     private void OnMouseDrag()
@@ -61,7 +64,7 @@ public class Draggable : MonoBehaviour
     {
         if (!isDragging) return;
 
-        gameManager?.PlaySound(3);
+        gameManager?.PlaySound(3); //マジックナンバーです。変数化してください。
         spriteRenderer.color = originalColor;
         isDragging = false;
     }
@@ -75,14 +78,14 @@ public class Draggable : MonoBehaviour
     {
         if (Time.timeScale == 0) return;
 
-        gameManager?.PlaySound(2);
+        gameManager?.PlaySound(2); //マジックナンバーです。変数化してください。
         spriteRenderer.color = dragColor;
 
         offset = transform.position - cursorWorldPos;
         isDragging = true;
 
         moveObject.StopMove();
-        moveObject.StartDeleteTimer(10f);
+        moveObject.StartDeleteTimer(10f); //マジックナンバーです。変数化してください。
     }
 
     // ドラッグ中（毎フレーム呼ぶ）
@@ -99,7 +102,7 @@ public class Draggable : MonoBehaviour
     {
         if (!isDragging) return;
 
-        gameManager?.PlaySound(3);
+        gameManager?.PlaySound(3); //マジックナンバーです。変数化してください。
         spriteRenderer.color = originalColor;
         isDragging = false;
     }

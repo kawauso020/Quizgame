@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class Product : MonoBehaviour
 {
     [SerializeField] GameObject productPrefab;
@@ -19,6 +22,7 @@ public class Product : MonoBehaviour
    private bool isOrderSheetL = false;
     private bool isOrderSheetR = false;
 
+    //コメントを残す場合はなぜ残しているかを書いてください
     //[SerializeField]
     //RectTransform uiElement; // Reference to the UI element (e.g., a drop target)
 
@@ -41,6 +45,7 @@ public class Product : MonoBehaviour
 
         gameManager = findGameManager.GetComponent<GameManager>();
 
+        //コメントを残す場合はなぜ残しているかを書いてください
         //findOrder = GameObject.FindWithTag("OrderSheet");
 
         //order =  findOrder.GetComponent<OrderFrom>();
@@ -48,7 +53,7 @@ public class Product : MonoBehaviour
 
     private void OnMouseUp()
     {
-
+        //コメントを残す場合はなぜ残しているかを書いてください
         //IsOrderSheet();
         //orderLeft.IsOrderSheet();
 
@@ -57,17 +62,17 @@ public class Product : MonoBehaviour
             if (productName == orderLeft.OrderproductTextList[0].text)
             {
                 Debug.Log("Sprite dropped on UI!");
-                OrderConfirmationLeft(0);
+                OrderConfirmationLeft(0);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else if (productName == orderLeft.OrderproductTextList[1].text)
             {
                 Debug.Log("Sprite dropped on UI!!");
-                OrderConfirmationLeft(1);
+                OrderConfirmationLeft(1);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else if (productName == orderLeft.OrderproductTextList[2].text)
             {
                 Debug.Log("Sprite dropped on UI!!!");
-                OrderConfirmationLeft(2);
+                OrderConfirmationLeft(2);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else
             {
@@ -80,17 +85,17 @@ public class Product : MonoBehaviour
             if (productName == orderRight.OrderproductTextList[0].text)
             {
                 Debug.Log("Sprite dropped on UI!");
-                OrderConfirmationRight(0);
+                OrderConfirmationRight(0);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else if (productName == orderRight.OrderproductTextList[1].text)
             {
                 Debug.Log("Sprite dropped on UI!!");
-                OrderConfirmationRight(1);
+                OrderConfirmationRight(1);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else if (productName == orderRight.OrderproductTextList[2].text)
             {
                 Debug.Log("Sprite dropped on UI!!!");
-                OrderConfirmationRight(2);
+                OrderConfirmationRight(2);//マジックナンバーです。どう変数化して、うまくできるか考えてください。
             }
             else
             {
@@ -98,7 +103,7 @@ public class Product : MonoBehaviour
             }
         }
 
-
+        //コメントを残す場合はなぜ残しているかを書いてください
         //if (productName == orderRight.OrderproductTextList[0].text)
         //{
         //    Debug.Log("Sprite dropped on UI!");
@@ -140,7 +145,7 @@ public class Product : MonoBehaviour
             gameManager.PlaySound(1);
             orderLeft.OrderNumList[elementNum] = 0;
             orderLeft.OrderNumTextList[elementNum].text = "かんりょう!!";
-            orderLeft.OrderNumTextList[elementNum + 3].enabled = false;
+            orderLeft.OrderNumTextList[elementNum + 3].enabled = false; //マジックナンバーです。変数化してください。
         }
     }
 
@@ -161,7 +166,7 @@ public class Product : MonoBehaviour
             gameManager.PlaySound(1);
             orderRight.OrderNumList[elementNum] = 0;
             orderRight.OrderNumTextList[elementNum].text = "かんりょう!!";
-            orderRight.OrderNumTextList[elementNum + 3].enabled = false;
+            orderRight.OrderNumTextList[elementNum + 3].enabled = false; //マジックナンバーです。変数化してください。
         }
     }
 
@@ -195,6 +200,7 @@ public class Product : MonoBehaviour
         }
     }
 
+//コメント残す場合、なぜ残しているか理由を書いてください。
     //private void OnMouseDown()
     //{
     //    offset = transform.position - GetMouseWorldPosition();
@@ -238,6 +244,7 @@ public class Product : MonoBehaviour
         return results.Count > 0;
     }
 
+    //なぜ残しているか書いて。残す必要がない場合は消してください。
     //private string IsOrderSheet()
     //{
 
