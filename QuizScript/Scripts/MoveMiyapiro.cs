@@ -13,7 +13,7 @@ public class MoveMiyapiro : MonoBehaviour
     void Start()
     {
         // 0.5秒ごとに移動方向を切り替える
-        InvokeRepeating(nameof(SwitchDirection), 0.5f, 1f);
+        InvokeRepeating(nameof(SwitchDirection), 0.5f, 1f); //マジックナンバーです。変数化してください。
     }
 
     void FixedUpdate()

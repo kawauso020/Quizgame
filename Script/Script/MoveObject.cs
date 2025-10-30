@@ -1,10 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class MoveObject : MonoBehaviour
 {
+
+    //以下のすべてのpublic変数について：
+    // なぜpublicなのか理由を教えてください。publicにする必要がないなら[SerializeField]にしてください。
     [Header("移動設定")]
-    public float moveSpeed = 3f;
+    public float moveSpeed = 3f; 
     public float destroyX = 10f;
 
     [Header("エフェクトや見た目")]

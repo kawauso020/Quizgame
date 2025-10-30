@@ -15,7 +15,7 @@ public class ScaleChangeMiyapiro : MonoBehaviour
     void Start()
     {
         // 0.5秒ごとに拡大・縮小を切り替える
-        InvokeRepeating(nameof(SwitchScaleDirection), 0.5f, 1f);
+        InvokeRepeating(nameof(SwitchScaleDirection), 0.5f, 1f); //マジックナンバーです。変数化してください。
     }
 
     void Update()

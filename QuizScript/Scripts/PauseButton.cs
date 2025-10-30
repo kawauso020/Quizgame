@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class PauseButton : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel; // ポーズ画面の参照

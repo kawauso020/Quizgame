@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// このクラスの説明を書いて！！！
+/// </summary>
 public class UICursorController : MonoBehaviour
 {
     [Header("Cursor UI")]
